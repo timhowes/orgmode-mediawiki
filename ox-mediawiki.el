@@ -96,11 +96,11 @@ by the footnotes themselves."
   :export-block '("MW" "MEDIAWIKI")
   :filters-alist '((:filter-parse-tree . org-mw-separate-elements))
   :menu-entry
-  '(?m "Export to Mediawiki"
-       ((?M "To temporary buffer"
+  '(?h 4
+       ((?M "As MediaWiki buffer"
             (lambda (a s v b) (org-mw-export-as-mediawiki a s v)))
-        (?m "To file" (lambda (a s v b) (org-mw-export-to-mediawiki a s v)))
-        (?o "To file and open"
+        (?m "As MediaWiki file" (lambda (a s v b) (org-mw-export-to-mediawiki a s v)))
+        (?n "As MediaWiki file and open"
             (lambda (a s v b)
               (if a (org-mw-export-to-mediawiki t s v)
                 (org-open-file (org-mw-export-to-mediawiki nil s v)))))))
